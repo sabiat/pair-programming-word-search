@@ -35,4 +35,34 @@ describe("#wordSearch()", function() {
 
     assert.isTrue(result);
   });
+
+
+  it("should return undefined if given an empty array", function() {
+    const result = wordSearch([], 'SEINFELD')
+    assert.isUndefined(result);
+  });
+
+  
+
+  it("should return true if the word is given vertically", function() {
+    const result = wordSearch([
+      ["A", "S", "C", "F", "Q", "U", "A", "L"],
+      ["E", "E", "I", "N", "F", "E", "L", "D"],
+      ["K", "I", "C", "F", "Q", "U", "A", "L"],
+      ["N", "N", "J", "T", "E", "V", "R", "G"],
+      ["L", "F", "C", "S", "Y", "E", "R", "L"],
+      ["U", "E", "R", "E", "N", "E", "Y", "B"],
+      ["L", "L", "T", "W", "A", "P", "A", "I"],
+      ["I", "D", "C", "A", "K", "U", "A", "S"],
+      
+    ], 'SEINFELD')
+    assert.isTrue(result);
+  });
+
+
+
 });
+
+
+
+
